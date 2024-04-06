@@ -1,8 +1,12 @@
 [tool.poetry]
-name = "ethical-fraud-detector"
+name = "sgs_chatbot"
 version = "0.1.0"
 description = "This package contains the implementation of the Rutgers SGS AI Assistant"
 authors = ["Advaith Rao <advaith652@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "sgs_chatbot"}]
+
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -11,6 +15,7 @@ langchain = "*"
 InstructorEmbedding = "*"
 pinecone-client = { git = "https://github.com/pinecone-io/pinecone-python-client.git" }
 regex = "*"
+scrapy = "*"
 
 [build-system]
 requires = ["setuptools>=42", "wheel"]
