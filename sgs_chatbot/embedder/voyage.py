@@ -8,9 +8,9 @@ class VoyageEmbedder():
 
     def embed(self, text: str | list[str]):
         if isinstance(text, str):
-            return np.mean(self.client.embed(self.split_texts(text)).embeddings, axis=0)
+            return np.mean(self.client.embed(self.split_texts(text)).embeddings, axis=0).tolist()
         else:
-            return [np.mean(self.client.embed(self.split_texts(t)).embeddings, axis=0) for t in text]
+            return [np.mean(self.client.embed(self.split_texts(t)).embeddings, axis=0).tolist() for t in text]
         
     def split_texts(self, text: str, max_length: int = 4000):
         if self.count_tokens(text) <= max_length:
