@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ethical-fraud-detector"
+version = "0.1.0"
+description = "This package contains the implementation of the Rutgers SGS AI Assistant"
+authors = ["Advaith Rao <advaith652@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+jupyter = "*"
+langchain = "*"
+InstructorEmbedding = "*"
+pinecone-client = { git = "https://github.com/pinecone-io/pinecone-python-client.git" }
+regex = "*"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0"
+pytest-xdist = "*"
