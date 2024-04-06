@@ -11,11 +11,17 @@ packages = [{include = "sgs_chatbot"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 jupyter = "*"
+pandas = "*"
 langchain = "*"
-InstructorEmbedding = "*"
+langchain_community = "*"
 pinecone-client = { git = "https://github.com/pinecone-io/pinecone-python-client.git" }
 regex = "*"
 scrapy = "*"
+markdownify = "*"
+transformers = "*"
+voyageai = "*"
+python-dotenv = "*"
+pyarrow = "*"
 
 [build-system]
 requires = ["setuptools>=42", "wheel"]
